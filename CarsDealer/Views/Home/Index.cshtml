@@ -1,0 +1,57 @@
+﻿ @using CarsssDealer.Models.CarsssModels
+@model List<CarsssDealer.Models.CarsssModels.Carsss>
+    ViewData["Title"] = "Home Page";
+}
+
+<br />
+
+<table>
+    <thead>
+
+        <tr>
+            <th>
+                Model
+            </th>
+
+            <th>
+                Make
+            </th>
+
+            <th>
+                Travelled Distance
+            </th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @item.Model
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @item.Make
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    @item.TravelledDistance
+                </th>
+            </tr>
+
+        }
+    </tbody>
+
+
+</table>
+
+
+<div class="row col-sm-offset-11 right">
+
+    <a href="https://localhost:44318/car/car" class="btn btn-info" role="button">Create</a>
+
+</div>
